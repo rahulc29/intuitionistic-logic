@@ -1,0 +1,10 @@
+open import Cubical.Foundations.Prelude
+open import Cubical.Relation.Binary
+open import Cubical.HITs.PropositionalTruncation
+open import Intuitionistic.Propositional.Syntax
+
+module Intuitionistic.Propositional.Model where
+
+record Model {ℓ} {ℓ'} {ℓ''} (G : Type ℓ) (R : Rel G G ℓ') (_⊨_ : ∀ {n} → PropRel G (Lift (Formula n)) ℓ'') : Type (ℓ-max ℓ (ℓ-max ℓ' ℓ'')) where
+  field
+    isInhabitedG : ∥ G ∥₁

@@ -1,0 +1,4 @@
+name: intuitionistic-logic
+depend: cubical
+include: src
+flags: --cubical
